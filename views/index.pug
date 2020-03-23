@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	.webgl-content
+		.footer
+			.webgl-logo
+			.fullscreen(onclick='unityInstance.SetFullscreen(1)')
+		#unityContainer
+block scripts
+	script.		
+		document.getElementById("unityContainer").removeAttribute("style")
+		document.getElementById("#canvas").onwheel = function(event){
+			event.preventDefault();
+		};
+		document.getElementById("#canvas").onmousewheel = function(event){
+			event.preventDefault();
+		};
+		if ("serviceWorker" in navigator) {
+			navigator.serviceWorker.register("sw.js").then((reg) => {
+				console.log("Service Worker Registered 🤩", reg.scope);
+			}).catch(function (err) {
+				console.log("Service Worker Failed to Register 😩", err);
+			});
+		}
