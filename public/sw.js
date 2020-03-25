@@ -16,7 +16,7 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const PRECACHE = "jalaboy-v3";
+const PRECACHE = "jalaboy-v5";
 const RUNTIME = "runtime";
 
 // A list of local resources we always want to be cached.
@@ -27,14 +27,10 @@ const PRECACHE_URLS = [
     "/Build/WebGL.wasm.code.unityweb",
     "/Build/WebGL.wasm.framework.unityweb",
     "/Build/UnityLoader.js",
-    "/TemplateData/favicon.ico",
     "/TemplateData/fullscreen.png",
     "/TemplateData/progressEmpty.Dark.png",
-    "/TemplateData/progressEmpty.Light.png",
     "/TemplateData/progressFull.Dark.png",
-    "/TemplateData/progressFull.Light.png",
-    "/TemplateData/progressLogo.Dark.png",    
-    "/TemplateData/progressLogo.Light.png",    
+    "/TemplateData/progressLogo.Dark.png", 
     "/TemplateData/UnityProgress.js",
     "/TemplateData/webgl-logo.png",
     "/TemplateData/style.css"
